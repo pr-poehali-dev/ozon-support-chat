@@ -273,11 +273,11 @@ export default function ChatArea({
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-slate-400">Сообщений</span>
-                <span className="text-xs font-medium text-slate-700">{selected.messages.length}</span>
+                <span className="text-xs font-medium text-slate-700">107+</span>
               </div>
               <div className="flex justify-between items-center">
                 <span className="text-xs text-slate-400">Создано</span>
-                <span className="text-xs text-slate-700">{formatTime(selected.date)}</span>
+                <span className="text-xs text-slate-700">17 фев.</span>
               </div>
             </div>
           </div>

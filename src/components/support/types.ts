@@ -44,7 +44,7 @@ export const MOCK_TICKETS: Ticket[] = [
     subject: "Снятие средств с карты",
     status: "open",
     priority: "medium",
-    date: "2026-04-14T17:13:00",
+    date: "2026-02-17T09:00:00",
     unread: 0,
     client: { name: "Вы", email: "", phone: "" },
     messages: [
