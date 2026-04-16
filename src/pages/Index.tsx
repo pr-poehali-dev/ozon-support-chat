@@ -21,8 +21,15 @@ export default function Index() {
       time: new Date().toISOString(),
       files: files.map((f) => ({ name: f.name, type: f.type.startsWith("image") ? "image" : "pdf", size: (f.size / 1024).toFixed(0) + " KB" })),
     };
+    const autoReply: Message = {
+      id: Date.now() + 1,
+      from: "agent",
+      text: "Ваше сообщение получено. Пожалуйста, ожидайте ответа специалиста.",
+      time: new Date().toISOString(),
+      files: [],
+    };
     const updated = tickets.map((t) =>
-      t.id === selected.id ? { ...t, messages: [...t.messages, newMsg] } : t
+      t.id === selected.id ? { ...t, messages: [...t.messages, newMsg, autoReply] } : t
     );
     setTickets(updated);
     setSelected(updated.find((t) => t.id === selected.id)!);
