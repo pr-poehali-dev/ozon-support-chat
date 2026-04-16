@@ -43,10 +43,10 @@ export const MOCK_TICKETS: Ticket[] = [
     id: "TK-2291",
     subject: "Снятие средств с карты",
     status: "open",
-    priority: "medium",
+    priority: "high",
     date: "2026-02-17T09:00:00",
     unread: 0,
-    client: { name: "Вы", email: "", phone: "" },
+    client: { name: "Вы", email: "duduruu555@mail.kg", phone: "+7 952 199 09 06" },
     messages: [
       {
         id: 1,
