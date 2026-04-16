@@ -65,18 +65,12 @@ export default function ChatArea({
     <>
       <header className="bg-white border-b border-slate-100 px-6 py-3.5 flex items-center justify-between shrink-0">
         <div className="flex items-center gap-3">
-          <button
-            className="md:hidden w-8 h-8 flex items-center justify-center text-slate-500 hover:bg-slate-100 rounded-lg"
-            onClick={onOpenSidebar}
-          >
-            <Icon name="Menu" size={18} />
-          </button>
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center text-slate-600 font-semibold text-sm shrink-0">
-            {selected.client.name.charAt(0)}
+          <div className="w-9 h-9 rounded-full bg-[#005bff] flex items-center justify-center shrink-0 overflow-hidden">
+            <span className="text-white font-bold text-[11px] tracking-tight leading-none">OZON</span>
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-sm font-semibold text-slate-800">{selected.client.name}</span>
+              <span className="text-sm font-semibold text-slate-800">Озон</span>
               <span className="text-xs text-slate-400 font-mono">{selected.id}</span>
             </div>
             <p className="text-xs text-slate-400 truncate max-w-[300px]">{selected.subject}</p>
@@ -106,8 +100,11 @@ export default function ChatArea({
               const isAgent = msg.from === "agent";
               return (
                 <div key={msg.id} className={`flex gap-3 ${isAgent ? "flex-row-reverse" : "flex-row"}`}>
-                  <div className={`w-7 h-7 rounded-full flex items-center justify-center text-[11px] font-semibold shrink-0 mt-0.5 ${isAgent ? "bg-slate-800 text-white" : "bg-slate-200 text-slate-600"}`}>
-                    {isAgent ? "А" : selected.client.name.charAt(0)}
+                  <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${isAgent ? "bg-[#005bff]" : "bg-slate-200"}`}>
+                    {isAgent
+                      ? <span className="text-white font-bold text-[8px] tracking-tight leading-none">OZON</span>
+                      : <span className="text-slate-600 text-[11px] font-semibold">Я</span>
+                    }
                   </div>
                   <div className={`max-w-[72%] ${isAgent ? "items-end" : "items-start"} flex flex-col`}>
                     <div className={`px-4 py-2.5 rounded-2xl text-sm leading-relaxed ${
